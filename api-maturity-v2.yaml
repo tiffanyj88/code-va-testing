@@ -2,57 +2,54 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   api-attributes:
-    test:
-      - no-avail
-      - test-avail
-      - test-avail-doc
-    lower:
+    testData:
+      - noAvailable
+      - testAvailable
+      - testAvailableDocumentation
+    lowerEnvironmentAccess:
       - approve
-      - more-than-2
-      - less-than-2
+      - moreThan2
+      - lessThan2
       - auto
-    doc:
-      - no-doc
-      - non-pub
-      - leg-form
-      - va-net
-      - pub
-      - oas
-    sup:
-      - not-sup
-      - not-main
-      - sup-no-team
-      - maint-limited
+    documentation:
+      - noDocumentation
+      - nonPublic
+      - legacyFormat
+      - vaNetwork
+      - public
+      - openApi
+    support:
+      - notSupported
+      - notMaintained
+      - supportWithoutTeam
+      - maintenanceLimited
       - contact
-      - sup-with-team
-      - maint-active
-    host:
-      - no-cloud
-      - cloud-manual
-      - cloud-auto
-    prod:
+      - supportedWithTeam
+      - activelyMaintained
+    hosting:
+      - noCloud
+      - cloudManual
+      - cloudAuto
+    productionAccess:
       - approve
-      - more-than-2
-      - less-than-2
+      - moreThan2
+      - lessThan2
       - immediate
     status:
-      - not-avail
-      - no-metrics
-      - no-logs
-      - status-exists
-      - status-historic
+      - notAvailable
+      - noMetrics
+      - noLogs
+      - statusExists
+      - statusHistoric
       - logs
       - metrics
   annotations:
-    wsdl: https://www.dataaccess.com/webservicesserver/NumberConversion.wso?wsdl
-    datadog/production-monitor-id: '139178'
-    datadog/sandbox-monitor-id: '139178'
-    pagerduty.com/integration-key: edf42287285e440fc012cced0e9a0bf4
-    hub.lighthouse.va.gov/api-id: appeals
-  name: api-maturity-test
+       hub.lighthouse.va.gov/api-id: appeals
+  name: api-maturity-test-new-format
   description: Example API for testing new features.
   tags:
   - lighthouse-developer-portal-test-set
+  - code-va-test
 spec:
   type: soap
   lifecycle: deprecated
