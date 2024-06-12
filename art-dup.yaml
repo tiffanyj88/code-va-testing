@@ -1,11 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: artists
+  name: music
   description: Artists api to test OpenAPI widget
   tags:
     - code-va-test-set
-    - artists
     - rest
 spec:
   type: openapi
