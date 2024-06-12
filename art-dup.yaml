@@ -1,0 +1,40 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: artists
+  description: Artists api to test OpenAPI widget
+  tags:
+    - code-va-test-set
+    - artists
+    - rest
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-a
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: music
+      license:
+        name: MIT
+    servers:
+      - url: http://artist-dev.spotify.net/v1
+        description: development server
+      - url: http://api-sandbox.va.gov/v1
+        description: sandbox server
+      - url: http://sandbox-api.va.gov/v2
+        description: another sandbox server
+      - url: https://api-qa.va.gov/v3
+        description: qa server
+      - url: http://artist.spotify.net/v1
+        description: a non-secure production server
+      - url: https://api.va.gov/v1
+        description: a secure production server
+    paths:
+      /artists:
+        get:
+          summary: List all artists
+          responses:
+            "200":
+              description: Success
