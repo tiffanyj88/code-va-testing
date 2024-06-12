@@ -46,7 +46,7 @@ metadata:
   annotations:
        wsdl: https://www.dataaccess.com/webservicesserver/NumberConversion.wso?wsdl
        hub.lighthouse.va.gov/api-id: appeals
-  name: maturity test v3
+  name: maturity v3
   description: Example API for testing new features.
   tags:
   - lighthouse-developer-portal-test-set
